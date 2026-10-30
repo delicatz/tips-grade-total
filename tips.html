@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Tip Calculator </title>
+<script type="text/javascript">
+function calculateTip(){
+    var amount = parseFloat(document.getElementById("amountBox").value);
+
+    var tipPercent = parseFloat(document.getElementById ("tipBox").value);
+    
+    var tipAmount = amount * (tipPercent / 100);
+
+    document.getElementById("outputDiv").innerHTML = "Tip Amount Will Be: " + tipAmount + "$";
+
+
+}
+</script>
+</head>
+<body>
+<P>
+Enter the check amount:
+$<input type="numeric" id="amountBox" size=10 value="">
+<br>
+Tip percentage:
+%<input type="numeric" id="tipBox" size=4 value="">
+</P>
+<input type="button" value="Calculate Tip"
+onclick="calculateTip();">
+<hr>
+<div id="outputDiv"> </div>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head>
+<title> Grade calculator</title>
+<script>
+//Add Function calculateGrade
+function calculateGrade()
+{
+    var homework = parseFloat(document.getElementById("homeworkBox").value);
+
+    var Labs = parseFloat(document.getElementById("labsBox").value)
+
+    var Midterms = parseFloat(document.getElementById("midtermBox").value)
+
+    var Final = parseFloat(document.getElementById("finalBox").value)
+
+    var Project = parseFloat(document.getElementById("projectBox").value)
+
+    var Attendance = parseFloat(document.getElementById("attendanceBox").value)
+
+
+var Total= (homework * .15) + (Labs * .20) + (Midterms * .20) + (Final * .10) + (Project * .30) + (Attendance * .05);
+
+document.getElementById("outputDiv").innerHTML = Total;
+   
+}
+</script>
+</head>
+<body>
+<table>
+<tr>
+<th> Section </th>
+<th> Weight</th>
+</tr>
+<tr>
+<td> Homework </td>
+<td> 15% </td>
+</tr>
+<tr>
+<td> Labs </td>
+<td> 20% </td>
+</tr>
+<tr>
+<td> Midterms </td>
+<td> 20% </td>
+</tr>
+<tr>
+<td> Final </td>
+<td> 10% </td>
+</tr>
+<tr>
+<td> Project </td>
+<td> 30% </td>
+</tr>
+<tr>
+<td> Attendance </td>
+<td> 5% </td>
+</tr>
+</table>
+
+
+
+
+
+
+<p> Please input the required scores here!</p>
+<table>
+    <tr>
+        <td>Homework</td>
+        <td><input type="numeric" id="homeworkBox" size=5 value=""></td>
+        </tr>
+        <td>Labs</td>
+        <td><input type="numeric" id="labsBox" size=5 value=""></td>
+    </tr>
+        <td>Midterms</td>
+        <td><input type="numeric" id="midtermBox" size=5 value=""></td>
+</tr>
+        <td>Final</td>
+        <td><input type="numeric" id="finalBox" size=5 value=""></td>
+        </tr>
+        <td>Project</td>
+        <td><input type="numeric" id="projectBox" size=5 value=""></td>
+    </tr>
+        <td>Attendance</td>
+        <td><input type="numeric" id="attendanceBox" size=5 value=""></td>
+    </tr>
+</table>
+<input type="button" value="Calculate Grade" onclick="calculateGrade();"/>
+<hr>
+Your weighted course grade is:
+<div id="outputDiv"> </div>
+</body>
+</html>
